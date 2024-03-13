@@ -153,3 +153,9 @@ Xoa resrc
 	kubectl delete service ocelotapigw-service
 
 cach config noi bo cac service call nhau thi bang ten http service + port
+
+-------------------
+Sau khi cap nhat code 
+ 1. build lai image 
+ 2. bush lên registry
+ 3. kubectl rollout restart {ten deployment}

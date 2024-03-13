@@ -32,12 +32,15 @@ namespace Ordering.Application.Features.Orders.Commands.UpdateOrder
                 _logger.LogInformation($"Order not exist in database.");
                 //throw new NotFoundException(nameof(Order), request.Id);
             }
+            else
+            {
+                _mapper.Map(request, orderToUpdate, typeof(UpdateOrderCommand), typeof(Order));
 
-            _mapper.Map(request, orderToUpdate, typeof(UpdateOrderCommand), typeof(Order));
+                await _orderRepository.UpdateAsync(orderToUpdate);
 
-            await _orderRepository.UpdateAsync(orderToUpdate);
+                _logger.LogInformation($"Order {orderToUpdate.Id} is successfully updated.");
+            }
 
-            _logger.LogInformation($"Order {orderToUpdate.Id} is successfully updated.");
 
             return Unit.Value;
         }

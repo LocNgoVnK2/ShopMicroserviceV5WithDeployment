@@ -80,6 +80,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "k8s", "k8s", "{3A411CF1-0E9
 		k8s\redis.yaml = k8s\redis.yaml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "aks", "aks", "{4F13BABC-F87F-45A4-92CE-9D0AF064BEC6}"
+	ProjectSection(SolutionItems) = preProject
+		aks\commans.txt = aks\commans.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{ACD16E2D-4CEE-4FB1-A9A4-C476573D2248}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ordering", "Ordering", "{741D9549-9CC8-420D-8FC5-2A644CA55A92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Application.UnitTests", "UnitTests\Ordering\Ordering.Application.UnitTests\Ordering.Application.UnitTests.csproj", "{EC2A7B0E-9B1D-43ED-96A9-2FD91F602715}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -150,6 +161,10 @@ Global
 		{4B380C1C-17CD-4F6A-A8FD-D752242BE048}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B380C1C-17CD-4F6A-A8FD-D752242BE048}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B380C1C-17CD-4F6A-A8FD-D752242BE048}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC2A7B0E-9B1D-43ED-96A9-2FD91F602715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC2A7B0E-9B1D-43ED-96A9-2FD91F602715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC2A7B0E-9B1D-43ED-96A9-2FD91F602715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC2A7B0E-9B1D-43ED-96A9-2FD91F602715}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -174,6 +189,8 @@ Global
 		{31A47ABB-ECEF-4902-ABEB-88DCF65418AC} = {95F329E6-DBB8-441E-B76D-1D68373D5AC0}
 		{BB38B892-44E2-4275-B674-BBC0DFCDF982} = {07621534-4AD6-4F43-BACC-48D94E8EFEE7}
 		{4B380C1C-17CD-4F6A-A8FD-D752242BE048} = {07621534-4AD6-4F43-BACC-48D94E8EFEE7}
+		{741D9549-9CC8-420D-8FC5-2A644CA55A92} = {ACD16E2D-4CEE-4FB1-A9A4-C476573D2248}
+		{EC2A7B0E-9B1D-43ED-96A9-2FD91F602715} = {741D9549-9CC8-420D-8FC5-2A644CA55A92}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {28136A77-865E-464A-B5D1-1F755AD02359}

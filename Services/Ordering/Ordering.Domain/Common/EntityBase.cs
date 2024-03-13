@@ -28,5 +28,15 @@ namespace Ordering.Domain.Common
         public DateTime CreatedDate { get; set; }
         public string LastModifiedBy { get; set; }
         public DateTime? LastModifiedDate { get; set; }
+
+        public void SetupForUnitTest(int id)
+        {
+            Id = id;
+            CreatedBy = "System";
+            CreatedDate = DateTime.UtcNow;
+            LastModifiedBy = "system";
+            LastModifiedDate = DateTime.UtcNow;
+        }
+     
     }
 }
