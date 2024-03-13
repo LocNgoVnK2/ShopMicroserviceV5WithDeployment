@@ -44,8 +44,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
-          "Port": "80"
+          "Host": "10.105.61.152",
+          "Port": "8003"
         }
       ],
       "UpstreamPathTemplate": "/Basket/{userName}",
@@ -56,8 +56,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
-          "Port": "80"
+          "Host": "10.105.61.152",
+          "Port": "8003"
         }
       ],
       "UpstreamPathTemplate": "/Basket",
@@ -68,8 +68,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
-          "Port": "80"
+          "Host": "10.105.61.152",
+          "Port": "8003"
         }
       ],
       "UpstreamPathTemplate": "/Basket/Checkout",
@@ -88,8 +88,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "discount.api",
-          "Port": "80"
+          "Host": "10.106.124.153",
+          "Port": "8005"
         }
       ],
       "UpstreamPathTemplate": "/Discount/{productName}",
@@ -104,8 +104,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "discount.api",
-          "Port": "80"
+          "Host": "10.106.124.153",
+          "Port": "8005"
         }
       ],
       "UpstreamPathTemplate": "/Discount",
@@ -117,8 +117,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "ordering.api",
-          "Port": "80"
+          "Host": "10.101.215.178",
+          "Port": "8004"
         }
       ],
       "UpstreamPathTemplate": "/Order/{userName}",

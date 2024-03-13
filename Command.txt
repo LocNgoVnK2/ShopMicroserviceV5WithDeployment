@@ -151,3 +151,5 @@ Xoa resrc
 
 	kubectl delete deployment ocelotapigw-deployment
 	kubectl delete service ocelotapigw-service
+
+cach config noi bo cac service call nhau thi bang ten http service + port

@@ -1,35 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ocelotapigw-deployment
+  name: orderingapi-deployment
   labels:
-     app: ocelotapigw
+    app: orderingapi
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: ocelotapigw
+      app: orderingapi
   template:
     metadata:
       labels:
-        app: ocelotapigw
+        app: orderingapi
     spec:
       containers:
-        - name: ocelotapigw
-          image: ngophuocloc/ocelotapigw:latest
+        - name: orderingapi
+          image: ngophuocloc/orderingapi:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
           env:
             - name: ASPNETCORE_ENVIRONMENT
               value: Development
-            - name: ApiSettings__CatalogUrl
-              value: http://catalogapi-service:8000
-            - name: IdentityServerSetting__IdsUrl
-              value: "http://identityserver-service:80"
-                  #configMapKeyRef:
-                   # name: catalogapi-configmap
-                    #key: catalogapi_url
+            - name: ConnectionStrings__OrderingConnectionString
+              value: Server=mssql-clusterip-srv,1433;Initial Catalog=Orders; User ID=sa; Password=Abc@1234;TrustServerCertificate=True
+            - name: EventBusSettings__HostAddress
+              value: amqp://guest:guest@rabbitmq-clusterip-srv:5672
           resources:
             requests:
               memory: "64Mi"
@@ -41,13 +38,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: ocelotapigw-service
+  name: orderingapi-service
 spec:
   type: NodePort
   selector:
-    app: ocelotapigw
+    app: orderingapi
   ports:
     - protocol: TCP
-      port: 8001
+      port: 8004
       targetPort: 80
-      nodePort: 30000
+      nodePort: 31003
+
