@@ -12,6 +12,7 @@ namespace Ordering.Infrastructure.Repositories
 {
     public class OrderRepository : RepositoryBase<Order>, IOrderRepository
     {
+
         public OrderRepository(OrderContext dbContext) : base(dbContext)
         {
         }

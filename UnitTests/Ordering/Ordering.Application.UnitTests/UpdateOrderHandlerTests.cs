@@ -31,17 +31,16 @@ namespace Ordering.Application.UnitTests
         [Fact]
         public async Task UpdateOrderSuccess_IfOrderExist_AndReturnUnitValue()
         {
-            // set up ban đầu
+
             var orderId = 1;
             var order = new Order();
             order.SetupForUnitTest(orderId);
 
             _repository.Setup(x => x.GetByIdAsync(orderId)).ReturnsAsync(order);
 
-            // thực hiện test
             var result = await _handler.Handle(new UpdateOrderCommand { Id = orderId }, CancellationToken.None);
 
-            // so sánh kết quả
+         
             Assert.NotNull(result);
             _repository.Verify(x => x.UpdateAsync(order), Times.Once);
         }
