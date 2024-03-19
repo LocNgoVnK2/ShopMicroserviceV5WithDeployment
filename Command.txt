@@ -159,3 +159,22 @@ Sau khi cap nhat code
  1. build lai image 
  2. bush lên registry
  3. kubectl rollout restart {ten deployment}
+
+
+ -------------------
+Step to apply CQRS vs MediaTor pattern
+B1 : T?O 3 Project 
+B2 : Add reference ( api -> Application,Infrastructure)
+				   ( Application -> Domain)
+				   (Infrastructure -> Application)
+B3 : ?i?n các connection string vào appsetting.json 
+B4 : T?o Doamin tr??c 
+B5 : T?o Contracts c?a application
+B6 : T?o file Setting Regis cho application
+B7 : Xu?ng Infrastructure T?o Context t?i 3 l?p IDbContext , DbContext,Context Seed ( ?? migrartion)
+B8 : T?o Repository Base
+B9 : T?o DB(product,orders, vv) Repository
+B10 : T?o file Setting Regis cho Infrastructure
+B11 : ??ng ký 2 file ??g khí ?ó ? API regis
+B12 : T?o các Behiviours => exception => feature + các mapping n?u có 
+B13 : T?o các controller .
