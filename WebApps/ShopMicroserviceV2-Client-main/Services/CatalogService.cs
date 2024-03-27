@@ -29,6 +29,7 @@ namespace AspnetRunBasics.Services
         {
             //_client.BaseAddress nhan gia trị từ start up
             //way 0
+
             var response = await _client.GetAsync("/Catalog");
             return await response.ReadContentAs<List<CatalogModel>>();
             //way 1

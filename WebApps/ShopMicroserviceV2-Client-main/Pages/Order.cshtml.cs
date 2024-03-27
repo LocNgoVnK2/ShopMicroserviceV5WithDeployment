@@ -25,7 +25,7 @@ namespace AspnetRunBasics
 
         public async Task<IActionResult> OnGetAsync()
         {
-            DiscountModel model = await _catalogService.GetDiscount();
+            //DiscountModel model = await _catalogService.GetDiscount();
             var userName = "";
             //get username form cokie
             var givenNameClaim = User.Claims.FirstOrDefault(c => c.Type == "given_name");

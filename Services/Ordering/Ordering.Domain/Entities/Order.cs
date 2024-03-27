@@ -5,11 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Ordering.Domain.Entities
 {
     public class Order : EntityBase
     {
         public string UserName { get; set; }
+      
         public decimal TotalPrice { get; set; }
 
         // BillingAddress

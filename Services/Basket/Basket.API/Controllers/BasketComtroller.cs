@@ -55,7 +55,7 @@ namespace Basket.API.Controllers
                 nameof(BasketController), nameof(GetBasket), eventId, userName);
             return Ok(basket ?? new ShoppingCart(userName));
         }
-
+        //way 1
         [HttpPost]
         [ProducesResponseType(typeof(ShoppingCart), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<ShoppingCart>> UpdateBasket([FromBody] ShoppingCart basket)
@@ -98,8 +98,8 @@ namespace Basket.API.Controllers
 
     
         }
-
-        [HttpDelete("{userName}", Name = "DeleteBasket")]
+ 
+            [HttpDelete("{userName}", Name = "DeleteBasket")]
         [ProducesResponseType(typeof(void), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> DeleteBasket(string userName)
         {

@@ -23,24 +23,24 @@ namespace Ordering.Infrastructure.Persistence
         private static IEnumerable<Order> GetPreconfiguredOrders()
         {
             var orders = new List<Order>
-    {
-        new Order() {
-            UserName = "swn",
-            FirstName = "Mehmet",
-            LastName = "Ozkaya",
-            EmailAddress = "ezozkme@gmail.com",
-            AddressLine = "Bahcelievler",
-            Country = "Turkey",
-            State = "Istanbul",
-            ZipCode = "12345",
-            TotalPrice = 350,
-            CardName = "John Doe",
-            CardNumber = "1234 5678 9012 3456",
-            Expiration = "12/24",
-            CVV = "123",
-            PaymentMethod = 1
-        }
-    };
+            {
+                new Order() {
+                    UserName = "swn",
+                    FirstName = "Mehmet",
+                    LastName = "Ozkaya",
+                    EmailAddress = "ezozkme@gmail.com",
+                    AddressLine = "Bahcelievler",
+                    Country = "Turkey",
+                    State = "Istanbul",
+                    ZipCode = "12345",
+                    TotalPrice = 350,
+                    CardName = "John Doe",
+                    CardNumber = "1234 5678 9012 3456",
+                    Expiration = "12/24",
+                    CVV = "123",
+                    PaymentMethod = 1
+                }
+            };
 
             // Thêm thông tin cho EntityBase cho mỗi đơn hàng
             foreach (var order in orders)
